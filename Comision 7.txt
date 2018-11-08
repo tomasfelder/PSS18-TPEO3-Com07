@@ -1,0 +1,20 @@
+- Agregar atributos al diagrama (ninguna relacion tiene el atributo)
+- Suban los diagramas como imagenes
+- Diagrama de clases GTA: pueden dejarlo similar a como esta, pero CiudadDeCarl y CiudadDeTommy serian Interfaces. Si no, pueden buscar otra solucion.
+	- Agregar atributo en relacion de Tommy a Carl
+	- Inmueble no puede pasar de EnVenta a NoVenta ?
+- Diagrama GTA-Auto: 
+	- En la llamada 4 nunca se devuelve el valor, tiene que haber una flecha que indique el resultado, y luego de eso comienza el if.
+	- El If PuedoPagar debe hacerse sobre CarlJohnson
+	- No queda claro que es HayMasAutos
+	- El loop If NoEncontroAuto es un ciclo, o es una condicion que se hace mientras busca un auto?
+	- Hay que marcar que Carl busca en una Coleccion de Autos.
+- Diagrama GTA-Capital:
+	- Marcar coleccion de inmuebles y autos sobre la que se itera
+	- Para preguntar a Handy si esta robado primero hay que pedirle la patente al auto
+	- Falta especificar cuánto se suma por cada inmueble y por cada auto robado o no (hay que mostrar como se va modificando el capital)
+
+Tratar de corregir lo mencionado, si no se entiende o no saben como acomodarlo lo vemos el martes en la clase y les ayudo.
+
+OBS: dejar funcionando el codigo que debía mostrarse para el sprint, o marcar con una etiqueta el código entregado en el sprint.
+Recordar poner los constructores de todas las clases en el diagrama UML.

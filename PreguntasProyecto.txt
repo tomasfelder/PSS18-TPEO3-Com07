@@ -1,0 +1,10 @@
+//preguntar
+
+
+
+- De que me sirve distinguir entre objetos preciosos y magia temporal?
+
+
+- Como podría usar el prototype para los premios? es Decir, tengo un atributo
+  de tipo Premio en la clase enemigo y debería clonar una instancia para 
+  inicializarlo y tirar eso en el mapa.
