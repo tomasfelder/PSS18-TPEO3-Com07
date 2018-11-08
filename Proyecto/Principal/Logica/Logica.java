@@ -266,4 +266,14 @@ public class Logica {
 		jugador = null;
 		gui.resetear();
 	}
+	
+	public void parar() {
+		this.tiempo.parar();
+	}
+
+	public void seguir() {
+		this.tiempo.seguir();
+		
+	}
+	
 }

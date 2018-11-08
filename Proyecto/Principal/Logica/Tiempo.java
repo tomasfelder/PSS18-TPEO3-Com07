@@ -8,11 +8,13 @@ public class Tiempo extends Thread{
 	private Logica log;
 	public final static int SLEEP_TIME = 40;
 	private TiempoEntreNiveles new_time;
+	private boolean seguir;
 	//constructor
 	
 	public Tiempo(Logica l) {
 		log = l;
 		new_time = new TiempoEntreNiveles(log);
+		seguir = true;
 	}
 	
 	//metodos
@@ -55,6 +57,14 @@ public class Tiempo extends Thread{
 		if(!log.hayMapa()) {
 			log.ganar();
 		}
+	}
+	
+	public void parar() {
+		seguir = false;
+	}
+
+	public void seguir() {
+		seguir = true;
 	}
 	
 	

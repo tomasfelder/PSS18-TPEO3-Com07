@@ -32,6 +32,10 @@ import javax.swing.SwingConstants.*;
  	 private JMenu menu;
  	 private JMenuItem restartItem;
  	 private JMenuItem logoutItem;
+
+ 	 private JMenuItem commentItem;
+	
+ 	 private Dialog dialog;
 	
 	 
 	//CONSTRUCTOR
@@ -65,6 +69,7 @@ import javax.swing.SwingConstants.*;
 		
 		menubar = new JMenuBar();
 		menu = new JMenu("Opciones");
+		
 		restartItem = new JMenuItem("Reiniciar");
 		restartItem.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -77,13 +82,30 @@ import javax.swing.SwingConstants.*;
 				close();
 			}
 		});
+		commentItem = new JMenuItem("Agregar Comentario");
+		commentItem.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				cerrarFrame();
+				abrirFrameComentarios();
+			}
+		});
 		
 		menu.add(restartItem);
 		menu.add(logoutItem);
+		menu.add(commentItem);
 		menubar.add(menu);
 		this.setJMenuBar(menubar);
 	}
 	
+	protected void cerrarFrame() {
+		this.setVisible(false);
+	}
+
+	protected void abrirFrameComentarios() {
+		JFrame commentsFrame = new FrameAgregarComentarios();
+		commentsFrame.setVisible(true);
+	}
+
 	public void close() {
 		System.exit(0);
 	}
@@ -103,7 +125,7 @@ import javax.swing.SwingConstants.*;
 		this.getContentPane().setLayout(null);
 		this.setBounds(250, 50, Mapa.MAX_X, Mapa.MAX_Y);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
+		dialog = new Dialog(this);
 		
 	}
 	
