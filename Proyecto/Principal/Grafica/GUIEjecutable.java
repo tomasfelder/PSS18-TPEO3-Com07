@@ -8,7 +8,7 @@ public class GUIEjecutable {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					GUI frame = new GUI();
+					GUI frame = new GUIWithMenu();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
