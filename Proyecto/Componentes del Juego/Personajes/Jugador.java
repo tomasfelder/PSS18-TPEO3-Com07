@@ -144,6 +144,12 @@ public class Jugador extends Personajes {
 		log.perder();
 	}
 	
+	public void reset() {
+		HP = 0;				  //por ejemplo cuando me impactan 2 enemigoskamikazes, y ya me habia matado el primero.
+		vidas = 0;
+		log.volverAEmpezar();
+		ya_mori = true; 
+	}
 	
 	//-----VISITOR-----
 	

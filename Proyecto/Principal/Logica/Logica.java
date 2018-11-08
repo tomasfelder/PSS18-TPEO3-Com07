@@ -242,10 +242,7 @@ public class Logica {
 	}
 	
 	public void resetearJuego() {
-		eliminarTodo();
-		jugador = null;
-		tiempo =  null;
-		gui.repintar();
+		jugador.reset();
 	}
 	
 	private void eliminarTodo() {
@@ -262,5 +259,11 @@ public class Logica {
 	
 	public void mostrarDialogoSans() {
 		gui.mostrarDialogosSans();
+	}
+
+	public void volverAEmpezar() {
+		eliminarTodo();
+		jugador = null;
+		gui.resetear();
 	}
 }

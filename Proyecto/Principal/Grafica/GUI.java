@@ -27,6 +27,11 @@ import javax.swing.SwingConstants.*;
 	 
 	 
 	 private Logica log;
+	 
+	 private JMenuBar menubar;
+ 	 private JMenu menu;
+ 	 private JMenuItem restartItem;
+ 	 private JMenuItem logoutItem;
 	
 	 
 	//CONSTRUCTOR
@@ -34,6 +39,7 @@ import javax.swing.SwingConstants.*;
 	public GUI() {
 		super("Galaxian");
 		initialize();
+		intializeMenu();
 	}
  	
 	private void initialize() {
@@ -53,6 +59,33 @@ import javax.swing.SwingConstants.*;
 		
 		OyenteTeclado OT = new OyenteTeclado();
 		this.addKeyListener(OT);
+	}
+	
+	private void intializeMenu() {
+		
+		menubar = new JMenuBar();
+		menu = new JMenu("Opciones");
+		restartItem = new JMenuItem("Reiniciar");
+		restartItem.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				reiniciar();
+			}
+		});
+		logoutItem = new JMenuItem("Salir");
+		logoutItem.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				close();
+			}
+		});
+		
+		menu.add(restartItem);
+		menu.add(logoutItem);
+		menubar.add(menu);
+		this.setJMenuBar(menubar);
+	}
+	
+	public void close() {
+		System.exit(0);
 	}
 	
 	public void repintar() {
@@ -265,6 +298,37 @@ import javax.swing.SwingConstants.*;
 
 	}
 	
+	public void mostrarPanelReiniciar() {
+		
+		lblDerrota = new JLabel("REINICIAR");
+		lblDerrota.setFont(new Font("Tahoma", Font.PLAIN, 64));
+		lblDerrota.setForeground(Color.RED);
+		lblDerrota.setBounds(312, 10, 400, 171);
+		getContentPane().add(lblDerrota);
+		
+		lblSansDerrota = new JLabel();
+		lblSansDerrota.setBounds(200, 150 , 418 , 189);
+		getContentPane().add(lblSansDerrota);
+		
+		lblTryAgain = new JLabel("Intentar de nuevo?");
+		lblTryAgain.setFont(new Font("Tahoma", Font.PLAIN, 24));
+		lblTryAgain.setForeground(Color.WHITE);
+		lblTryAgain.setBounds(350, 380, 239, 54);
+		getContentPane().add(lblTryAgain);
+		
+		btnSi = new JButton("Si");
+		btnSi.setBackground(Color.RED);
+		btnSi.setForeground(Color.BLACK);
+		btnSi.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		btnSi.setBounds(407, 500, 89, 23);
+		getContentPane().add(btnSi);
+		
+		OyenteBoton OB = new OyenteBoton();
+		btnSi.addActionListener(OB);
+		
+		repintar();
+	}
+	
 	class OyenteBoton implements ActionListener {
 		
 		public void actionPerformed(ActionEvent e) {
@@ -275,7 +339,10 @@ import javax.swing.SwingConstants.*;
 	
 	public void reiniciar() {
 		log.resetearJuego();
-		log.empezarJuego();
+	}
+
+	public void resetear() {
+		mostrarPanelReiniciar();
 	}
 	
 }
