@@ -273,6 +273,9 @@ import javax.swing.SwingConstants.*;
 		}
 	}
 	
-	
+	public void reiniciar() {
+		log.resetearJuego();
+		log.empezarJuego();
+	}
 	
 }

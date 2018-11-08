@@ -241,6 +241,13 @@ public class Logica {
 		gui.mostrarPanelDerrota();
 	}
 	
+	public void resetearJuego() {
+		eliminarTodo();
+		jugador = null;
+		tiempo =  null;
+		gui.repintar();
+	}
+	
 	private void eliminarTodo() {
 		resetearMapa();
 		lista_agregar = new ListaDE<Objeto>();
