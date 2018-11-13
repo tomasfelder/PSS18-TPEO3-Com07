@@ -38,8 +38,19 @@ public class GUIWithMenu extends JFrame {
 				close();
 			}
 		});
-		btnSalir.setBounds(154, 156, 129, 25);
+		btnSalir.setBounds(154, 190, 129, 25);
 		getContentPane().add(btnSalir);
+		
+		JButton btnCerrarSesin = new JButton("Cerrar Sesi\u00F3n");
+		btnCerrarSesin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				ocultarPantalla();
+				LogIn frame=new LogIn();
+				frame.setVisible(true);
+			}
+		});
+		btnCerrarSesin.setBounds(154, 154, 129, 23);
+		getContentPane().add(btnCerrarSesin);
 	}
 	
 	private void ocultarPantalla() {
@@ -54,5 +65,4 @@ public class GUIWithMenu extends JFrame {
 		JFrame commentsFrame = new FrameAgregarComentarios();
 		commentsFrame.setVisible(true);
 	}
-	
 }
