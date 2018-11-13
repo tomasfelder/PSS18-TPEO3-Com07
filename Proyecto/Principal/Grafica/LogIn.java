@@ -67,7 +67,7 @@ public class LogIn extends JFrame{
 							
 						}
 						else{
-							GUI gui = new GUI();
+							GUIWithMenu gui = new GUIWithMenu();
 							gui.setVisible(true);
 							close();
 						}
