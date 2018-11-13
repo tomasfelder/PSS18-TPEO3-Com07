@@ -6,7 +6,7 @@ import Personajes.*;
 import Mapas.*;
 import ObjetoGeneral.*;
 
-
+import javax.swing.JLabel;
 
 import Grafica.*;
 
@@ -256,9 +256,16 @@ public class Logica {
 		jugador = null;
 		gui.mostrarPanelVictoria();
 	}
+
 	
-	public void mostrarDialogoSans() {
-		gui.mostrarDialogosSans();
+	public void agregarLabel(JLabel l) {
+		gui.getContentPane().add(l);
+		gui.repintar();
+	}
+	
+	public void removerLabel(JLabel l) {
+		gui.remove(l);
+		gui.repintar();
 	}
 
 	public void volverAEmpezar() {

@@ -10,7 +10,7 @@ public abstract class Obstaculo extends Objeto {
 	//atributos
 	public final static int ANCHO  = 60;
 	public final static int ALTO = 20;
-	protected final static int MAX_HP = 20;
+	
 	
 	protected int HP;
 	protected boolean ya_mori;
@@ -23,7 +23,7 @@ public abstract class Obstaculo extends Objeto {
 		inteligencia = new InteligenciaDummyPermanente();
 		visitor = new VisitorDummy();
 		
-		HP = MAX_HP;
+		
 		ya_mori = false;
 		
 		//----PARTE GRAFICA DEL OBSTACULO----

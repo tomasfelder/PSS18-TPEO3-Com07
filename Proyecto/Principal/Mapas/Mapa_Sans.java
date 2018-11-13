@@ -4,6 +4,10 @@ import Logica.*;
 import ObjetoGeneral.*;
 import TDALista.*;
 import Personajes.*;
+
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
 import EnemigosConcretos.*;
 import Obstaculos.*;
 public class Mapa_Sans extends Mapa {
@@ -24,7 +28,7 @@ public class Mapa_Sans extends Mapa {
 
 	public PositionList<Objeto> obtenerObjetosIniciales(){
 		
-		log.mostrarDialogoSans(); //importante: si se usa este mapa como primer nivel, comentar esta instruccion para no tener
+		mostrarDialogoSans(); //importante: si se usa este mapa como primer nivel, comentar esta instruccion para no tener
 								  //			que esperar los sleeps que hay en GUI
 		
 		PositionList<Objeto> L = new ListaDE<Objeto>();
@@ -38,5 +42,35 @@ public class Mapa_Sans extends Mapa {
 		 return L;
 	 }
 	 
+	private void mostrarDialogoSans() {
+		try {
+			JLabel lblDialogoSans = new JLabel();
+			lblDialogoSans.setBounds(325, 20 , 407, 209);
+			lblDialogoSans.setIcon(new ImageIcon("Sprites/Sans_Dialog_1.png"));
+			log.agregarLabel(lblDialogoSans);
 	
+			Thread.sleep(3500);
+		
+			lblDialogoSans.setIcon(new ImageIcon("Sprites/Sans_Dialog_2.png"));
+			lblDialogoSans.setBounds(325, 20, 405, 185);
+		
+			Thread.sleep(3500);
+		
+			log.removerLabel(lblDialogoSans);
+		
+			Thread.sleep(300);
+		
+			lblDialogoSans.setIcon(new ImageIcon("Sprites/Sans_Dialog_3.png"));
+			lblDialogoSans.setBounds(320, 175, 405, 193);
+			log.agregarLabel(lblDialogoSans);
+		
+			Thread.sleep(2500);
+		
+			log.removerLabel(lblDialogoSans);
+		}
+	
+		catch(InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
 }

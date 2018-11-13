@@ -19,6 +19,7 @@ public class DestruidosPorTodos extends Obstaculo{
 		//----PARTE LOGICA DE DestruidosPorTodos----
 		
 		super(l, x, y);
+		HP = 21;
 		
 		
 		//----PARTE GRAFICA DE DestruidosPorTodos----

@@ -19,6 +19,7 @@ public class BarricadaParaEnemigos extends Obstaculo{
 		//----PARTE LOGICA DE BarricadaParaEnemigos----
 		
 		super(l, x, y);
+		HP= 12;
 		
 		
 		//----PARTE GRAFICA DE BarricadaParaEnemigo----
