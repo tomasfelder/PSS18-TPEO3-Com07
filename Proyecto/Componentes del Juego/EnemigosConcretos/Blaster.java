@@ -26,7 +26,7 @@ public class Blaster extends Enemigo {
 				
 		//----PARTE GRAFICA DE Blaster----
 		
-		rec = crear_rectangulo(x,y,45,60); //redefine el rectangulo de Enemigo
+		rec = crear_rectangulo(x,y,40,55); //redefine el rectangulo de Enemigo
 		imagen = new ImageIcon("Sprites/Blaster.png");
 		etiqueta = new JLabel();
 		etiqueta.setBounds(rec);

@@ -180,39 +180,8 @@ import javax.swing.SwingConstants.*;
 		repintar();
 	}
 	
-	public void mostrarDialogosSans() {
-		try {
-			
-			lblDialogoSans = new JLabel();
-			lblDialogoSans.setBounds(325, 20 , 407, 209);
-			lblDialogoSans.setIcon(new ImageIcon("Sprites/Sans_Dialog_1.png"));
-			getContentPane().add(lblDialogoSans);
-		
-			Thread.sleep(3500);
-			
-			lblDialogoSans.setIcon(new ImageIcon("Sprites/Sans_Dialog_2.png"));
-			lblDialogoSans.setBounds(325, 20, 405, 185);
-			
-			Thread.sleep(3500);
-			
-			this.remove(lblDialogoSans);
-			
-			Thread.sleep(300);
-			
-			lblDialogoSans.setIcon(new ImageIcon("Sprites/Sans_Dialog_3.png"));
-			lblDialogoSans.setBounds(320, 175, 405, 193);
-			getContentPane().add(lblDialogoSans);
-			
-			Thread.sleep(2500);
-			
-			this.remove(lblDialogoSans);
-		}
-		catch(InterruptedException e) {
-			e.printStackTrace();
-		}
-		
-		repintar();
-	}
+	
+	
 	
 	//-------------------------------------------
 	//-------------OYENTES-----------------------

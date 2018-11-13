@@ -27,21 +27,27 @@ public class Mapa_1 extends Mapa {
 		
 		 
 		 
-		 L.addLast(new BarricadaParaEnemigos (log , 5 , MAX_Y / 2));
+		 L.addLast(new BarricadaParaEnemigos (log , 20 , MAX_Y / 2));
+		 L.addLast(new BarricadaParaEnemigos (log , 870 , MAX_Y / 2));
+		 		 
+		 L.addLast(new DestruidosPorTodos (log, MAX_X - Obstaculo.ANCHO - 120 , MAX_Y /2 - 60));
+		 L.addLast(new DestruidosPorTodos (log, MAX_X - Obstaculo.ANCHO - 430 , MAX_Y /2 - 60));
+		 L.addLast(new DestruidosPorTodos (log, MAX_X - Obstaculo.ANCHO - 740 , MAX_Y /2 - 60));
 		 
-		 L.addLast(new DestruidosPorTodos (log, MAX_X - Obstaculo.ANCHO - 10 , MAX_Y /2));
-		 
-		 for(int i = 0 ; i<6 ; i++) {
-			 EnemigoConArma ene = new EnemigoConArma(log , 300 + i*100 , 100 , 1 , powerups[ i % CANT_MAX_PREMIOS].clone());
+		 for(int i = 0 ; i<8 ; i++) {
+			 EnemigoConArma ene = new EnemigoConArma(log , 250 + i*80 , 70 , 1 , powerups[ i % CANT_MAX_PREMIOS].clone());
 			 L.addLast(ene);
 			 cantEnemigos++;
 		 }
 		
 		 for(int i = 0 ; i<6 ; i++) {
-			EnemigoKamikazeAleatorio ene = new EnemigoKamikazeAleatorio( log, 300 + i*100 , 200  ,1 , powerups[ i % CANT_MAX_PREMIOS].clone());
+			EnemigoKamikazeAleatorio ene = new EnemigoKamikazeAleatorio( log, 300 + i*90 , 150  ,1 , powerups[ i % CANT_MAX_PREMIOS].clone());
 			L.addLast(ene);
 			cantEnemigos++;
 		}
+		
+		 
+		 
 		
 		 return L;
 	 }
