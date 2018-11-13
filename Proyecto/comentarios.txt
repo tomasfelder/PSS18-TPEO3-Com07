@@ -16,7 +16,13 @@ Hola
 Probando
 Tue Nov 13 11:47:37 ART 2018
 
+<<<<<<< HEAD
 Ignacio
 Gran juego!
 Tue Nov 13 12:44:44 ART 2018
+=======
+Pablo
+La verdad que el juego muy bueno, sigan asi
+Tue Nov 13 12:38:43 ART 2018
+>>>>>>> 280301c3c717d9df5bbc19633ca04e38e4a64e89
 
