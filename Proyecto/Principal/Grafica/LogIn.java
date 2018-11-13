@@ -47,7 +47,7 @@ public class LogIn extends JFrame{
 		passwordField.setBounds(196, 119, 86, 20);
 		getContentPane().add(passwordField);
 		
-		usuarios.put("Comision7", "sarasa");
+		usuarios.put("comision7", "sarasa");
 		usuarios.put("admin", "1234");
 		
 		JButton btnAceptar = new JButton("Aceptar");
@@ -60,8 +60,19 @@ public class LogIn extends JFrame{
 					
 					if ((contraseniaIngresadaParseada!=null) && (contraseniaIngresadaParseada.equals(contrasenia)))
 					{
-						GUI gui = new GUI();
-						gui.setVisible(true);
+						System.out.println((textFieldUsuario.getText()));
+						if(textFieldUsuario.getText().equals("admin")){
+							close();
+							new PantallaComentarios();
+							
+						}
+						else{
+							GUI gui = new GUI();
+							gui.setVisible(true);
+							close();
+						}
+						logeado=true;
+						
 					}
 					else JOptionPane.showMessageDialog(null, "Usuario incorrecto", "Error", JOptionPane.WARNING_MESSAGE);
 				}
@@ -73,5 +84,7 @@ public class LogIn extends JFrame{
 		
 		
 	}
-	
+	 private void close(){
+		 this.setVisible(false);
+	 }
 }
