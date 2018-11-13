@@ -20,7 +20,7 @@ import javax.swing.SwingConstants.*;
  	//ATRIBUTOS
 	 
 	 private JLabel lblHp , lblPuntaje , lblVidas , numVidas , numPuntaje ,
-	 			    lblDerrota , lblTryAgain , lblSansDerrota, lblVictoria , lblDialogoSans;
+	 			    lblDerrota , lblTryAgain , lblSansDerrota, lblVictoria;
 	 
 	 private JButton btnSi;
 	 private JProgressBar BarraVida;
